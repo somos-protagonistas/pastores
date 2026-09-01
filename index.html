@@ -1,0 +1,187 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#173F4F"><title>Pastoral+ V2.5.2</title><link rel="manifest" href="manifest.json"><style>
+:root{--p:#173F4F;--s:#718C7A;--t:#C9875B;--bg:#F7F4EE;--ink:#263238;--muted:#687477;--line:#dde3df}*{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,sans-serif;background:var(--bg);color:var(--ink)}button,input,select,textarea{font:inherit}.app{max-width:920px;margin:auto;padding-bottom:90px;min-height:100vh}.hidden{display:none!important}.top{display:flex;justify-content:space-between;align-items:center;padding:16px}.brand{display:flex;gap:10px;align-items:center}.logo{width:46px;height:46px;border-radius:15px;background:var(--p);color:white;display:grid;place-items:center;font-weight:900}.sp{font-size:10px;letter-spacing:.13em;text-transform:uppercase;color:var(--s);font-weight:800}.muted{color:var(--muted);font-size:13px}.hero{margin:0 16px 16px;padding:24px;border-radius:26px;background:linear-gradient(135deg,#173F4F,#285E6D);color:white}.hero h1{margin:5px 0 8px;font-size:30px}.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;padding:0 16px}.tool{border:1px solid var(--line);background:#fff;border-radius:22px;padding:18px;text-align:left;cursor:pointer;box-shadow:0 8px 22px #173f4f0c}.tool h3{margin:8px 0 5px}.tool p{margin:0;color:var(--muted);font-size:13px;line-height:1.45}.ico{font-size:28px}.screen{display:none;padding:0 16px}.screen.active{display:block}.panel,.result{background:#fff;border:1px solid var(--line);border-radius:22px;padding:18px;margin-bottom:14px}.result{border-left:4px solid var(--t);border-radius:16px}.result h4{margin:0 0 8px}.result p{white-space:pre-wrap;line-height:1.55;margin:0}.copy{float:right;border:0;background:#edf3ef;border-radius:9px;padding:6px 9px;cursor:pointer}.back{border:0;background:transparent;color:var(--p);font-weight:800;padding:8px 0 14px;cursor:pointer}.btn{border:0;border-radius:14px;padding:12px 15px;font-weight:800;cursor:pointer}.primary{background:var(--p);color:#fff}.secondary{background:#edf3ef;color:var(--p)}.terra{background:#f8eee8;color:#8a5737}.actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}label{display:block;font-size:13px;font-weight:800;margin:12px 0 6px}input,select,textarea{width:100%;border:1px solid #d7dfda;border-radius:13px;padding:12px;background:#fbfcfb}textarea{min-height:90px}.row{display:grid;grid-template-columns:1fr 1fr;gap:10px}.login{min-height:100vh;display:grid;place-items:center;padding:20px}.loginbox{max-width:430px;width:100%;background:#fff;border:1px solid var(--line);border-radius:28px;padding:28px}.badge{display:inline-block;background:#edf3ef;color:#456453;border-radius:999px;padding:5px 9px;font-size:11px;font-weight:800}.notice{padding:12px 14px;border-radius:14px;background:#fff5ee;color:#805339;font-size:13px}.closebox{text-align:center;padding:26px}.closebox strong{font-size:23px;color:var(--p)}nav{position:fixed;bottom:0;left:0;right:0;background:#ffffffee;backdrop-filter:blur(10px);border-top:1px solid var(--line);display:flex;justify-content:center}nav div{max-width:920px;width:100%;display:flex}nav button{flex:1;border:0;background:transparent;padding:11px 4px;color:var(--muted);cursor:pointer}nav b{display:block;font-size:19px}@media(max-width:620px){.grid,.row{grid-template-columns:1fr}.hero h1{font-size:26px}}
+
+.brand-lockup{display:flex;align-items:center;gap:12px}
+.sp-logo{width:50px;height:50px;border-radius:16px;background:linear-gradient(135deg,var(--terra),#e2ad88);color:white;display:grid;place-items:center;font-weight:900;letter-spacing:-.03em;box-shadow:0 8px 18px #c9875b2b}
+.sp-word{font-weight:900;color:var(--p);letter-spacing:.01em}
+.developed{margin-top:14px;padding-top:14px;border-top:1px solid var(--line);font-size:12px;color:var(--muted)}
+.developed strong{color:var(--p)}
+.brand-strip{background:#fff6f0;border:1px solid #efd5c4;color:#7a4b31;border-radius:16px;padding:10px 12px;margin:0 0 14px;font-size:12px;font-weight:800;text-align:center}
+.footer-brand{margin-top:24px;text-align:center;color:var(--muted);font-size:12px;padding:18px 8px}
+.footer-brand strong{color:var(--p)}
+</style>
+<style id="learn-v252">
+.learn-hero{background:linear-gradient(135deg,#173F4F,#315c68);color:#fff;border-radius:22px;padding:20px;margin-bottom:14px}
+.learn-hero h2{margin:5px 0 8px}.learn-hero p{margin:6px 0;color:#eef5f3;line-height:1.5}
+.learn-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:14px}
+.learn-stat{background:#ffffff18;border:1px solid #ffffff25;border-radius:13px;padding:9px;text-align:center}
+.learn-stat b{display:block;font-size:18px}.learn-stat span{font-size:11px}
+.learn-progress{background:#fff;border:1px solid #e6e2da;border-radius:16px;padding:13px;margin:12px 0}
+.learn-track{height:9px;background:#e8ece9;border-radius:999px;overflow:hidden;margin-top:8px}
+.learn-bar{height:100%;width:0;background:#718C7A;transition:.2s}
+.learn-chapter{border:1px solid #e6e2da;border-radius:16px;background:#fff;margin:10px 0;overflow:hidden}
+.learn-chapter summary{cursor:pointer;list-style:none;display:flex;gap:10px;align-items:center;padding:14px}
+.learn-chapter summary::-webkit-details-marker{display:none}
+.learn-num{width:38px;height:38px;border-radius:11px;background:#eef3ef;color:#173F4F;display:grid;place-items:center;font-weight:800;flex:0 0 38px}
+.learn-title{flex:1}.learn-title small{display:block;color:#C9875B;font-weight:800}.learn-title b{display:block;margin-top:2px}.learn-title span{font-size:12px;color:#687477}
+.learn-body{padding:0 14px 15px;border-top:1px solid #eee9e1}
+.learn-box{border-radius:13px;padding:12px;margin-top:10px;background:#F7F4EE}
+.learn-box h4{margin:0 0 6px}.learn-box p,.learn-box li{line-height:1.5}
+.learn-quote{background:#173F4F;color:#fff;border-radius:13px;padding:12px;margin-top:12px;font-style:italic}
+.learn-check{display:flex;gap:8px;align-items:flex-start;margin:8px 0}
+.learn-check input{margin-top:3px}
+.learn-notes{width:100%;min-height:80px;border:1px solid #ddd6cb;border-radius:12px;padding:10px;margin-top:8px;font:inherit}
+.learn-plan{display:grid;gap:8px}.learn-phase{border:1px solid #e6e2da;border-radius:14px;padding:12px;background:#fff}
+.learn-gloss details{border-bottom:1px solid #e6e2da;padding:8px 0}.learn-gloss summary{font-weight:700;cursor:pointer}
+.exit-nav{color:#8b3c2e!important}
+@media(min-width:700px){.learn-plan{grid-template-columns:repeat(3,1fr)}}
+</style>
+</head><body>
+<section id="login" class="login"><div class="loginbox"><div class="brand"><div class="logo">P+</div><div><div class="sp">Somos Protagonistas</div><strong>Pastoral+</strong></div></div><h1>Más tiempo para las personas.</h1><p class="muted">Herramientas prácticas para preparar, comunicar, liderar y acompañar.</p><label>Código de acceso</label><input id="code" placeholder="MX7K4" autocomplete="off"><label>Clave</label><input id="pass" type="password" placeholder="••••••••" autocomplete="off"><div class="actions"><button class="btn primary" onclick="doLogin()">Ingresar</button></div><p id="loginErr" class="muted"></p><p class="muted">V2.5.2 · by Somos Protagonistas</p></div></section>
+<div id="shell" class="app hidden"><div class="top"><div class="brand"><div class="logo">P+</div><div><div class="sp">Somos Protagonistas</div><strong>Pastoral+</strong><div class="muted">Más tiempo para las personas.</div></div></div><span class="badge">V2.5.2</span></div><main><div class="brand-strip">PASTORAL+ · una mini app desarrollada por SOMOS PROTAGONISTAS</div>
+<section id="home" class="screen active"><div class="hero"><div class="sp" style="color:#ffd8c3">SOMOS PROTAGONISTAS PRESENTA</div><h1>¿Qué necesitas preparar hoy?</h1><p>Una idea. Múltiples recursos. Menos trabajo.</p><div style="margin-top:14px;font-size:12px;opacity:.86">Desarrollado por <strong>Somos Protagonistas</strong></div></div><div class="grid">
+<button class="tool" data-open="sermon"><div class="ico">⭐</div><h3>Sermón 360</h3><p>Bosquejo completo, textos, puntos, aplicación, llamado y oración.</p></button>
+<button class="tool" data-open="comms"><div class="ico">📣</div><h3>Comunicación 360</h3><p>Una actividad se convierte en seis piezas listas para copiar.</p></button>
+<button class="tool" data-open="study"><div class="ico">📚</div><h3>Estudio Bíblico 360</h3><p>Sesión participativa con preguntas, aplicación y seguimiento.</p></button>
+<button class="tool" data-open="meeting"><div class="ico">👥</div><h3>Reunión 360</h3><p>Agenda, facilitación, acuerdos y mensaje posterior.</p></button>
+<button class="tool" data-open="care"><div class="ico">🤝</div><h3>Acompañamiento</h3><p>Rutas de conversación sin guardar información confidencial.</p></button>
+<button class="tool" data-open="dev"><div class="ico">🙏</div><h3>Devocional 360</h3><p>Reflexiones y series breves para acompañar la semana.</p></button>
+</div></section>
+<section id="sermon" class="screen"><button class="back" data-open="home">← Inicio</button><div class="panel"><span class="badge">⭐ HERRAMIENTA ESTRELLA</span><h2>Sermón 360</h2><div class="notice">📖 Sermón 360 usa una biblioteca pastoral local. No utiliza IA, n8n ni conexión a Internet.</div><label>Tema</label><input id="sTopic" placeholder="Ej. Fe en tiempos difíciles"><div class="row"><div><label>Tipo</label><select id="sType"><option>Pastoral</option><option>Motivacional</option><option>Doctrinal</option><option>Evangelístico</option></select></div><div><label>Audiencia</label><select id="sAudience"><option>General</option><option>Jóvenes</option><option>Matrimonios</option><option>Liderazgo</option><option>Personas en crisis</option></select></div></div><div class="row"><div><label>Duración</label><select id="sDuration"><option>20</option><option selected>30</option><option>45</option><option>60</option></select></div><div><label>Profundidad</label><select id="sDepth"><option>Práctico</option><option selected>Equilibrado</option><option>Profundo</option></select></div></div><div class="actions"><button class="btn primary" onclick="sermon(false)">✨ Generar sermón</button><button class="btn secondary" onclick="sermon(true)">🔁 Otra versión</button><button class="btn terra" onclick="clearSermon()">🧹 Limpiar</button></div></div><div id="sOut"></div></section>
+<section id="comms" class="screen"><button class="back" data-open="home">← Inicio</button><div class="panel"><span class="badge">📣 KIT COMPLETO</span><h2>Comunicación 360</h2><label>Actividad</label><input id="cEvent" placeholder="Encuentro de Familias"><div class="row"><div><label>Audiencia</label><select id="cAudience"><option>Congregación</option><option>Jóvenes</option><option>Matrimonios y familias</option><option>Líderes</option><option>Voluntarios</option><option>Comunidad</option></select></div><div><label>Tono</label><select id="cTone"><option>Inspirador</option><option>Cercano</option><option>Enérgico</option><option>Formal</option><option>Juvenil</option></select></div></div><div class="row"><div><label>Fecha</label><input id="cDate" type="date"></div><div><label>Hora</label><input id="cTime" type="time"></div></div><label>Lugar</label><input id="cPlace"><label>Información adicional</label><textarea id="cExtra"></textarea><div class="actions"><button class="btn primary" onclick="comms()">✨ Generar kit</button><button class="btn terra" onclick="clearComms()">🧹 Limpiar</button></div></div><div id="cOut"></div></section>
+<section id="study" class="screen"><button class="back" data-open="home">← Inicio</button><div class="panel"><h2>📚 Estudio Bíblico 360</h2><label>Tema</label><input id="bTopic" placeholder="Ej. El perdón"><div class="row"><div><label>Audiencia</label><select id="bAudience"><option>General</option><option>Jóvenes</option><option>Nuevos creyentes</option><option>Líderes</option><option>Matrimonios</option></select></div><div><label>Duración</label><select id="bDuration"><option>30</option><option selected>45</option><option>60</option><option>90</option></select></div></div><div class="actions"><button class="btn primary" onclick="study()">✨ Preparar estudio</button><button class="btn terra" onclick="clearStudy()">🧹 Limpiar</button></div></div><div id="bOut"></div></section>
+<section id="meeting" class="screen"><button class="back" data-open="home">← Inicio</button><div class="panel"><h2>👥 Reunión 360</h2><label>Tipo</label><select id="mType"><option>Líderes</option><option>Voluntarios</option><option>Equipo pastoral</option><option>Jóvenes</option><option>Planificación</option><option>Organización de evento</option></select><label>Objetivo</label><input id="mGoal" placeholder="Mejorar la participación de voluntarios"><label>Duración</label><select id="mDuration"><option>30</option><option selected>45</option><option>60</option><option>90</option></select><label>Situación actual (opcional)</label><textarea id="mSituation"></textarea><div class="actions"><button class="btn primary" onclick="meeting()">✨ Preparar reunión</button><button class="btn terra" onclick="clearMeeting()">🧹 Limpiar</button></div></div><div id="mOut"></div></section>
+<section id="care" class="screen"><button class="back" data-open="home">← Inicio</button><div class="panel"><h2>🤝 Acompañamiento Pastoral</h2><div class="notice">No ingreses nombres ni información confidencial.</div><label>Situación</label><select id="aSituation"><option>Persona desanimada</option><option>Persona atravesando una pérdida</option><option>Conflicto entre personas</option><option>Persona que se ha alejado</option><option>Líder o voluntario agotado</option><option>Persona enfrentando una decisión</option><option>Persona nueva en la congregación</option><option>Conversación difícil</option></select><label>Momento</label><select id="aMoment"><option>Primera conversación</option><option>Seguimiento</option><option>Preparar una llamada</option><option>Preparar una visita</option></select><div class="actions"><button class="btn primary" onclick="care()">Preparar conversación</button><button class="btn terra" onclick="clearCare()">🧹 Limpiar</button></div></div><div id="aOut"></div></section>
+<section id="dev" class="screen"><button class="back" data-open="home">← Inicio</button><div class="panel"><h2>🙏 Devocional 360</h2><label>Tema</label><input id="dTopic" placeholder="Ej. Perseverancia"><div class="row"><div><label>Audiencia</label><select id="dAudience"><option>Congregación</option><option>Jóvenes</option><option>Matrimonios</option><option>Líderes</option><option>Voluntarios</option><option>Personal</option></select></div><div><label>Serie</label><select id="dDays"><option value="1">1 día</option><option value="3">3 días</option><option value="5">5 días</option><option value="7">7 días</option></select></div></div><div class="actions"><button class="btn primary" onclick="dev()">✨ Generar devocional</button><button class="btn terra" onclick="clearDev()">🧹 Limpiar</button></div></div><div id="dOut"></div></section>
+
+<section id="learn" class="screen">
+  <div class="learn-hero">
+    <div class="sp" style="color:#fff">APRENDER · PASTORAL+</div>
+    <h2>🎓 IA para Pastores: Fundamentos sin Miedo</h2>
+    <p>Un recorrido práctico para comprender, discernir y aplicar la Inteligencia Artificial en el contexto pastoral, manteniendo siempre la responsabilidad humana.</p>
+    <p><b>Somos Protagonistas</b></p>
+    <div class="learn-stats">
+      <div class="learn-stat"><b>8</b><span>capítulos</span></div>
+      <div class="learn-stat"><b>90</b><span>días de acción</span></div>
+      <div class="learn-stat"><b>100%</b><span>local</span></div>
+    </div>
+  </div>
+
+  <div class="learn-progress">
+    <div style="display:flex;justify-content:space-between;gap:10px"><b>Avance de aprendizaje</b><span id="learnProgressText">0 de 8 · 0%</span></div>
+    <div class="learn-track"><div class="learn-bar" id="learnProgressBar"></div></div>
+    <button class="btn terra" style="margin-top:10px" onclick="resetLearnProgress()">↺ Restablecer progreso</button>
+  </div>
+
+  <details class="learn-chapter">
+    <summary><div class="learn-num">01</div><div class="learn-title"><small>CAPÍTULO 1</small><b>¿Qué es la Inteligencia Artificial?</b><span>Comprender antes de decidir.</span></div></summary>
+    <div class="learn-body">
+      <div class="learn-quote">“No temas a la herramienta; hazte responsable de cómo la administras.”</div>
+      <div class="learn-box"><h4>📖 Para estudiar</h4><p>La IA es una herramienta creada por seres humanos que reconoce patrones y puede generar respuestas, textos, imágenes o análisis. No tiene alma, conciencia ni intención propia. La responsabilidad de discernir y decidir sigue siendo humana.</p></div>
+      <div class="learn-box"><h4>📊 Ideas clave</h4><ul><li>Automatización e IA no son lo mismo.</li><li>La IA puede ordenar, resumir y proponer borradores.</li><li>No reemplaza discernimiento, cuidado pastoral ni decisiones morales.</li></ul></div>
+      <div class="learn-box"><h4>💬 Pregunta</h4><p>¿Qué tareas consumen tiempo que podrías dedicar al cuidado pastoral, oración o enseñanza profunda?</p></div>
+      <textarea class="learn-notes" data-learn-note="1" placeholder="Mis notas del capítulo 1..."></textarea>
+      <label class="learn-check"><input type="checkbox" class="learn-done" data-learn-ch="1"><span>Marcar capítulo 1 como completado</span></label>
+    </div>
+  </details>
+
+  <details class="learn-chapter">
+    <summary><div class="learn-num">02</div><div class="learn-title"><small>CAPÍTULO 2</small><b>IA y Fe: ¿Amenaza o Herramienta?</b><span>Discernimiento bíblico.</span></div></summary>
+    <div class="learn-body">
+      <div class="learn-quote">“La herramienta no cambió el mensaje del Evangelio; multiplicó su alcance.”</div>
+      <div class="learn-box"><h4>📖 Para estudiar</h4><p>El desafío no es aceptar o rechazar automáticamente la tecnología, sino discernir cómo usarla sin comprometer la esencia del mensaje. Deben evitarse tanto la fascinación ingenua como el rechazo por miedo.</p></div>
+      <div class="learn-box"><h4>🛡️ Tres preguntas</h4><ul><li>¿Sirve a las personas o las reemplaza donde se requiere presencia humana?</li><li>¿La uso para preparar mejor mi servicio o para evitar mi responsabilidad?</li><li>¿El uso es transparente y honesto?</li></ul></div>
+      <textarea class="learn-notes" data-learn-note="2" placeholder="Mis notas del capítulo 2..."></textarea>
+      <label class="learn-check"><input type="checkbox" class="learn-done" data-learn-ch="2"><span>Marcar capítulo 2 como completado</span></label>
+    </div>
+  </details>
+
+  <details class="learn-chapter">
+    <summary><div class="learn-num">03</div><div class="learn-title"><small>CAPÍTULO 3</small><b>Cómo funciona la IA, en lenguaje sencillo</b><span>Primer borrador, nunca autoridad final.</span></div></summary>
+    <div class="learn-body">
+      <div class="learn-quote">“La IA es un asistente de primer borrador, nunca la autoridad final.”</div>
+      <div class="learn-box"><h4>📖 Para estudiar</h4><p>Los modelos generativos trabajan reconociendo patrones y prediciendo respuestas. Pueden responder con seguridad y aun así equivocarse. Por eso todo contenido debe revisarse, especialmente en temas doctrinales, pastorales o legales.</p></div>
+      <div class="learn-box"><h4>📌 Conceptos</h4><ul><li><b>Prompt:</b> la instrucción que damos.</li><li><b>Alucinación:</b> información convincente pero incorrecta o inventada.</li><li><b>Revisión humana:</b> paso obligatorio antes de usar el resultado.</li></ul></div>
+      <textarea class="learn-notes" data-learn-note="3" placeholder="Mis notas del capítulo 3..."></textarea>
+      <label class="learn-check"><input type="checkbox" class="learn-done" data-learn-ch="3"><span>Marcar capítulo 3 como completado</span></label>
+    </div>
+  </details>
+
+  <details class="learn-chapter">
+    <summary><div class="learn-num">04</div><div class="learn-title"><small>CAPÍTULO 4</small><b>IA en la vida diaria del pastor</b><span>Proteger tiempo para lo que solo el pastor puede hacer.</span></div></summary>
+    <div class="learn-body">
+      <div class="learn-quote">“No es que la máquina predique por ti; es que te ayuda a proteger tu tiempo para lo que solo tú puedes hacer.”</div>
+      <div class="learn-box"><h4>📖 Para estudiar</h4><p>La oportunidad está principalmente en tareas mecánicas: borradores, resúmenes, comunicaciones, organización y planificación. Las tareas relacionales —acompañar, escuchar, visitar, orar y discernir— permanecen humanas.</p></div>
+      <div class="learn-box"><h4>🎯 Ejercicio</h4><p>Identifica una sola tarea administrativa que hoy te consume tiempo. Pregúntate qué parte podría simplificarse y qué parte necesita necesariamente tu presencia.</p></div>
+      <textarea class="learn-notes" data-learn-note="4" placeholder="Mis notas del capítulo 4..."></textarea>
+      <label class="learn-check"><input type="checkbox" class="learn-done" data-learn-ch="4"><span>Marcar capítulo 4 como completado</span></label>
+    </div>
+  </details>
+
+  <details class="learn-chapter">
+    <summary><div class="learn-num">05</div><div class="learn-title"><small>CAPÍTULO 5</small><b>Ministerio por edades</b><span>La tecnología como invitación, nunca imposición.</span></div></summary>
+    <div class="learn-body">
+      <div class="learn-quote">“La tecnología debe ser una invitación para cada generación, nunca una imposición.”</div>
+      <div class="learn-box"><h4>📖 Para estudiar</h4><p>Cada generación tiene necesidades y lenguajes diferentes. Con niños prima la seguridad; con jóvenes, formatos y ética digital; con adultos, utilidad práctica; con adultos mayores, simplicidad y acompañamiento humano.</p></div>
+      <textarea class="learn-notes" data-learn-note="5" placeholder="Mis notas del capítulo 5..."></textarea>
+      <label class="learn-check"><input type="checkbox" class="learn-done" data-learn-ch="5"><span>Marcar capítulo 5 como completado</span></label>
+    </div>
+  </details>
+
+  <details class="learn-chapter">
+    <summary><div class="learn-num">06</div><div class="learn-title"><small>CAPÍTULO 6</small><b>Liderazgo consciente en la era de la IA</b><span>Revisar cómo observamos el cambio.</span></div></summary>
+    <div class="learn-body">
+      <div class="learn-quote">“No vemos el mundo como es, sino como somos.”</div>
+      <div class="learn-box"><h4>📖 Para estudiar</h4><p>Nuestra interpretación del cambio influye en nuestras acciones. Un líder puede comunicar tecnología desde ansiedad o desde exploración responsable. El cambio sostenible exige revisar creencias, lenguaje y hábitos, no solo incorporar herramientas.</p></div>
+      <textarea class="learn-notes" data-learn-note="6" placeholder="Mis notas del capítulo 6..."></textarea>
+      <label class="learn-check"><input type="checkbox" class="learn-done" data-learn-ch="6"><span>Marcar capítulo 6 como completado</span></label>
+    </div>
+  </details>
+
+  <details class="learn-chapter">
+    <summary><div class="learn-num">07</div><div class="learn-title"><small>CAPÍTULO 7</small><b>Cultura de innovación y mentoring</b><span>Aprender juntos y proteger la confianza.</span></div></summary>
+    <div class="learn-body">
+      <div class="learn-quote">“El papel del líder no es saberlo todo.”</div>
+      <div class="learn-box"><h4>📖 Para estudiar</h4><p>Una cultura sana de innovación necesita aliados, espacios pequeños de experimentación y reglas claras sobre privacidad, revisión y transparencia. El aprendizaje puede compartirse entre generaciones mediante mentoring cruzado.</p></div>
+      <div class="learn-box"><h4>🎯 Acción</h4><p>Identifica 2–3 personas con curiosidad y criterio que puedan formar un pequeño equipo de exploración.</p></div>
+      <textarea class="learn-notes" data-learn-note="7" placeholder="Mis notas del capítulo 7..."></textarea>
+      <label class="learn-check"><input type="checkbox" class="learn-done" data-learn-ch="7"><span>Marcar capítulo 7 como completado</span></label>
+    </div>
+  </details>
+
+  <details class="learn-chapter">
+    <summary><div class="learn-num">08</div><div class="learn-title"><small>CAPÍTULO 8</small><b>Tu plan de acción de 90 días</b><span>Explorar · Aplicar · Multiplicar.</span></div></summary>
+    <div class="learn-body">
+      <div class="learn-quote">“No se trata de la tecnología por sí misma; se trata de las personas a las que servimos mejor gracias a ella.”</div>
+      <div class="learn-box"><h4>📖 Para estudiar</h4><p>El aprendizaje se convierte en transformación cuando pasa a la acción de manera progresiva. Los primeros 30 días son para explorar; los siguientes 30 para aplicar en tareas reales; y los últimos 30 para multiplicar aprendizajes y definir principios responsables.</p></div>
+      <textarea class="learn-notes" data-learn-note="8" placeholder="Mis notas del capítulo 8..."></textarea>
+      <label class="learn-check"><input type="checkbox" class="learn-done" data-learn-ch="8"><span>Marcar capítulo 8 como completado</span></label>
+    </div>
+  </details>
+
+  <div class="panel" style="margin-top:14px">
+    <h2>🗓️ Plan de 90 días</h2>
+    <div class="learn-plan">
+      <div class="learn-phase"><b>DÍAS 1–30 · EXPLORAR</b><p>Probar herramientas sin presión, observar reacciones y aprender lenguaje básico.</p></div>
+      <div class="learn-phase"><b>DÍAS 31–60 · APLICAR</b><p>Elegir 2–3 tareas reales, trabajar con primeros borradores y revisar cada resultado.</p></div>
+      <div class="learn-phase"><b>DÍAS 61–90 · MULTIPLICAR</b><p>Formar equipo, definir principios responsables y compartir aprendizajes.</p></div>
+    </div>
+  </div>
+
+  <div class="panel learn-gloss" style="margin-top:14px">
+    <h2>🧠 Glosario básico</h2>
+    <details><summary>Inteligencia Artificial</summary><p>Programas entrenados para reconocer patrones y generar respuestas, sin conciencia ni intención propia.</p></details>
+    <details><summary>IA generativa</summary><p>IA capaz de producir contenido nuevo a partir de patrones aprendidos.</p></details>
+    <details><summary>Prompt</summary><p>Instrucción o pregunta que damos a una IA; su claridad influye en el resultado.</p></details>
+    <details><summary>Alucinación</summary><p>Información que parece convincente pero es incorrecta o inventada.</p></details>
+  </div>
+
+  <div class="panel" style="margin-top:14px;text-align:center">
+    <b>Pastoral+ · Desarrollado por Somos Protagonistas</b>
+    <p class="muted">Aprender está integrado de forma nativa dentro de la aplicación.</p>
+  </div>
+</section>
+
+<section id="guide" class="screen"><div class="panel"><h2>🛡️ Guía Pastoral+</h2><div class="result"><h4>🟢 Tecnología para preparar</h4><p>Organizar ideas, preparar materiales y estructurar acciones.</p></div><div class="result"><h4>🟡 El pastor revisa y adapta</h4><p>Contenido bíblico, orientación sensible y cualquier material que vaya a compartirse.</p></div><div class="result"><h4>🔴 Lo humano no se delega</h4><p>Discernimiento, confidencialidad, decisiones críticas, cuidado y presencia.</p></div><div class="actions"><button class="btn terra" onclick="logout()">🚪 Salir</button></div></div></section>
+<div class="footer-brand">Pastoral+ · <strong>Desarrollado por Somos Protagonistas</strong><br>Simple por fuera. Inteligente por dentro. Humana siempre.</div></main><nav><div><button data-open="home"><b>🏠</b>Inicio</button><button data-open="learn"><b>🎓</b>Aprender</button><button data-open="guide"><b>🛡️</b>Guía</button><button class="exit-nav" onclick="logout()"><b>🚪</b>Salir</button></div></nav></div>
+<script src="app.js?v=2.5.2"></script></body></html>
