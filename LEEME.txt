@@ -1,5 +1,7 @@
-Pastoral+ V2.6.3
-Correcciones:
-- Liderazgo y Equipos y Cuidado del Pastor ahora conservan la misma geometría redondeada, tamaño, espaciado y jerarquía visual que las otras tarjetas.
-- Se agregó botón 🏠 Inicio dentro de ambos módulos para regresar directamente a la portada.
-- Se mantiene toda la funcionalidad de V2.6.2.
+Pastoral+ V2.6.4
+Corrección puntual:
+- Liderazgo y Equipos usa ahora exactamente el mismo control ← Inicio de los módulos existentes.
+- Cuidado del Pastor usa ahora exactamente el mismo control ← Inicio de los módulos existentes.
+- Se eliminó el botón Inicio personalizado de V2.6.3.
+- La navegación utiliza data-open="home", el mismo mecanismo ya funcional en el resto de Pastoral+.
+- Se conserva el diseño y funcionalidad de V2.6.3.
