@@ -1,8 +1,8 @@
-Pastoral+ V2.6.5
-Cambio visual puntual:
-- Pantalla de acceso con mayor presencia y contraste, sin usar colores chillones.
-- Fondo verde/crema/terracota muy suave con tarjeta blanca de alto contraste.
-- Marca P+ reforzada con degradado verde petróleo y acento dorado.
-- Franja superior multicolor inspirada en la identidad visual del proyecto.
-- Titular y jerarquía visual reforzados.
-- No se modifica la lógica de acceso ni los módulos de V2.6.4.
+Pastoral+ V2.6.6 — Interfaz viva integral
+
+- Entrada con mayor energía visual manteniendo sobriedad.
+- El color de cada módulo ya no se limita a la tarjeta de inicio.
+- Cada módulo conserva su identidad cromática en fondo, paneles, formularios,
+  botones, campos activos, resultados, avisos y elementos de interacción.
+- Se mantiene la navegación y lógica funcional de V2.6.5.
+- Sin IA, n8n ni backend.
