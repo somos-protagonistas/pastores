@@ -54,7 +54,7 @@ function clearStudy(){clearModule(['bTopic','bAudience','bDuration'],'bOut',{bDu
 function clearMeeting(){clearModule(['mType','mGoal','mDuration','mSituation'],'mOut',{mDuration:'45'})}
 function clearCare(){clearModule(['aSituation','aMoment'],'aOut')}
 function clearDev(){clearModule(['dTopic','dAudience','dDays'],'dOut')}
-function doLogin(){const c=val('code').toUpperCase();if(users[c]===$('pass').value){$('login').classList.add('hidden');$('shell').classList.remove('hidden');$('loginErr').textContent=''}else $('loginErr').textContent='Código o clave incorrectos.'}
+function doLogin(){const c=val('code').toUpperCase();if(users[c]===$('pass').value){$('login').classList.add('hidden');$('shell').classList.remove('hidden');$('loginErr').textContent='';show('home')}else $('loginErr').textContent='Código o clave incorrectos.'}
 function logout(){$('shell').classList.add('hidden');$('login').classList.remove('hidden');$('code').value='';$('pass').value='';$('loginErr').textContent='';show('home')}
 document.addEventListener('click',e=>{
   const open=e.target.closest('[data-open]');
@@ -112,7 +112,7 @@ document.addEventListener('input',e=>{
 });
 
 document.addEventListener('DOMContentLoaded',()=>{loadLearnProgress();$('login').classList.remove('hidden');$('shell').classList.add('hidden');$('pass')?.addEventListener('keydown',e=>{if(e.key==='Enter')doLogin()});});
-if('serviceWorker' in navigator)navigator.serviceWorker.register('./sw.js?v=2.6.7');
+if('serviceWorker' in navigator)navigator.serviceWorker.register('./sw.js?v=2.6.8');
 
 
 const leadershipRoutes = {

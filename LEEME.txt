@@ -1,7 +1,12 @@
-Pastoral+ V2.6.7
-Correcciones:
-1. Después de un acceso válido se abre directamente Inicio con los módulos visibles.
-2. Los módulos ahora llevan su color principal al encabezado, fondo, panel, campos,
-   botones, avisos y resultados; no solamente a una etiqueta.
-3. Se conserva la identidad cromática individual de los ocho módulos.
-4. No se cambia la lógica funcional de generación.
+Pastoral+ V2.6.8 — corrección estructural
+
+CORREGIDO:
+1. doLogin() ahora ejecuta show('home') de forma explícita después de validar acceso.
+   Por tanto, los 8 módulos deben aparecer inmediatamente al ingresar.
+2. Colores interiores aplicados con selectores directos por módulo, no solo variables:
+   fondo, encabezado, panel, campos, botón principal, avisos y resultados.
+3. Caché PWA actualizada a v2.6.8.
+
+IMPORTANTE PARA GITHUB:
+Reemplazar TODOS los archivos del repositorio por los de este ZIP.
+Confirmar que la app muestre V2.6.8 antes de evaluar los cambios.

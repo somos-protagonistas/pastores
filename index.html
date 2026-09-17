@@ -1,4 +1,4 @@
-<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#173F4F"><title>Pastoral+ V2.6.7</title><link rel="manifest" href="manifest.json"><style>
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#173F4F"><title>Pastoral+ V2.6.8</title><link rel="manifest" href="manifest.json"><style>
 :root{--p:#173F4F;--s:#718C7A;--t:#C9875B;--bg:#F7F4EE;--ink:#263238;--muted:#687477;--line:#dde3df}*{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,sans-serif;background:var(--bg);color:var(--ink)}button,input,select,textarea{font:inherit}.app{max-width:920px;margin:auto;padding-bottom:90px;min-height:100vh}.hidden{display:none!important}.top{display:flex;justify-content:space-between;align-items:center;padding:16px}.brand{display:flex;gap:10px;align-items:center}.logo{width:46px;height:46px;border-radius:15px;background:var(--p);color:white;display:grid;place-items:center;font-weight:900}.sp{font-size:10px;letter-spacing:.13em;text-transform:uppercase;color:var(--s);font-weight:800}.muted{color:var(--muted);font-size:13px}.hero{margin:0 16px 16px;padding:24px;border-radius:26px;background:linear-gradient(135deg,#173F4F,#285E6D);color:white}.hero h1{margin:5px 0 8px;font-size:30px}.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;padding:0 16px}.tool{border:1px solid var(--line);background:#fff;border-radius:22px;padding:18px;text-align:left;cursor:pointer;box-shadow:0 8px 22px #173f4f0c}.tool h3{margin:8px 0 5px}.tool p{margin:0;color:var(--muted);font-size:13px;line-height:1.45}.ico{font-size:28px}.screen{display:none;padding:0 16px}.screen.active{display:block}.panel,.result{background:#fff;border:1px solid var(--line);border-radius:22px;padding:18px;margin-bottom:14px}.result{border-left:4px solid var(--t);border-radius:16px}.result h4{margin:0 0 8px}.result p{white-space:pre-wrap;line-height:1.55;margin:0}.copy{float:right;border:0;background:#edf3ef;border-radius:9px;padding:6px 9px;cursor:pointer}.back{border:0;background:transparent;color:var(--p);font-weight:800;padding:8px 0 14px;cursor:pointer}.btn{border:0;border-radius:14px;padding:12px 15px;font-weight:800;cursor:pointer}.primary{background:var(--p);color:#fff}.secondary{background:#edf3ef;color:var(--p)}.terra{background:#f8eee8;color:#8a5737}.actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}label{display:block;font-size:13px;font-weight:800;margin:12px 0 6px}input,select,textarea{width:100%;border:1px solid #d7dfda;border-radius:13px;padding:12px;background:#fbfcfb}textarea{min-height:90px}.row{display:grid;grid-template-columns:1fr 1fr;gap:10px}.login{min-height:100vh;display:grid;place-items:center;padding:20px}.loginbox{max-width:430px;width:100%;background:#fff;border:1px solid var(--line);border-radius:28px;padding:28px}.badge{display:inline-block;background:#edf3ef;color:#456453;border-radius:999px;padding:5px 9px;font-size:11px;font-weight:800}.notice{padding:12px 14px;border-radius:14px;background:#fff5ee;color:#805339;font-size:13px}.closebox{text-align:center;padding:26px}.closebox strong{font-size:23px;color:var(--p)}nav{position:fixed;bottom:0;left:0;right:0;background:#ffffffee;backdrop-filter:blur(10px);border-top:1px solid var(--line);display:flex;justify-content:center}nav div{max-width:920px;width:100%;display:flex}nav button{flex:1;border:0;background:transparent;padding:11px 4px;color:var(--muted);cursor:pointer}nav b{display:block;font-size:19px}@media(max-width:620px){.grid,.row{grid-template-columns:1fr}.hero h1{font-size:26px}}
 
 .brand-lockup{display:flex;align-items:center;gap:12px}
@@ -50,7 +50,7 @@ body{background:linear-gradient(180deg,#dff2e6 0,#fff5d9 36%,#f7f1e8 100%)!impor
 </style>
 
 <style id="v263-fixes">
-/* V2.6.7: los dos módulos nuevos conservan exactamente la geometría de las tarjetas principales */
+/* V2.6.8: los dos módulos nuevos conservan exactamente la geometría de las tarjetas principales */
 .grid .leadership-card,.grid .pastorcare-card{
   border-radius:24px!important;
   min-height:185px!important;
@@ -73,7 +73,7 @@ body{background:linear-gradient(180deg,#dff2e6 0,#fff5d9 36%,#f7f1e8 100%)!impor
 </style>
 
 <style id="v265-login">
-/* Login V2.6.7: más presencia visual, manteniendo sobriedad */
+/* Login V2.6.8: más presencia visual, manteniendo sobriedad */
 #login{
   background:
     radial-gradient(circle at 12% 12%,rgba(213,168,75,.22),transparent 27%),
@@ -240,7 +240,7 @@ body{background:linear-gradient(180deg,#dff2e6 0,#fff5d9 36%,#f7f1e8 100%)!impor
 </style>
 
 <style id="v267-module-energy">
-/* V2.6.7: identidad cromática intensa y coherente dentro de cada módulo */
+/* V2.6.8: identidad cromática intensa y coherente dentro de cada módulo */
 .screen:not(#home):not(#login){
   position:relative;
   overflow:hidden;
@@ -321,12 +321,87 @@ body{background:linear-gradient(180deg,#dff2e6 0,#fff5d9 36%,#f7f1e8 100%)!impor
  .screen:not(#home):not(#login) .notice{background:#f7faf8!important}
 }
 </style>
+
+<style id="v268-hard-module-colors">
+/* V2.6.8: colores directos por módulo para asegurar que toda la interfaz tenga identidad */
+#sermon{background:linear-gradient(145deg,#ffe7dc,#fff8f3 52%,#f8d7c8)!important}
+#comms{background:linear-gradient(145deg,#dff4fb,#f7fcff 52%,#cdebf5)!important}
+#study{background:linear-gradient(145deg,#ddf5e6,#f8fff9 52%,#ccebd8)!important}
+#meeting{background:linear-gradient(145deg,#fff0c9,#fffaf0 52%,#f8df9d)!important}
+#care{background:linear-gradient(145deg,#f9dfeb,#fff8fb 52%,#efc9dc)!important}
+#dev{background:linear-gradient(145deg,#e9e0fa,#fbf9ff 52%,#d8c9f1)!important}
+#leadership{background:linear-gradient(145deg,#d9f0f2,#f8ffff 52%,#c4e4e7)!important}
+#pastorcare{background:linear-gradient(145deg,#f9dde1,#fff8f9 52%,#f0c5cc)!important}
+
+#sermon .panel,#comms .panel,#study .panel,#meeting .panel,#care .panel,#dev .panel,
+#leadership .panel,#pastorcare .panel{
+  border:0!important;border-radius:24px!important;padding:22px!important;
+  box-shadow:0 14px 32px rgba(23,63,79,.16)!important;background:#fffdf9!important;
+}
+
+/* Encabezados internos fuertes */
+#sermon .panel h2{background:linear-gradient(135deg,#d75f35,#a83c25)!important}
+#comms .panel h2{background:linear-gradient(135deg,#168bb5,#0d6387)!important}
+#study .panel h2{background:linear-gradient(135deg,#149458,#087443)!important}
+#meeting .panel h2{background:linear-gradient(135deg,#e3a51c,#b87509)!important}
+#care .panel h2{background:linear-gradient(135deg,#b94d79,#87345d)!important}
+#dev .panel h2{background:linear-gradient(135deg,#7357a8,#513887)!important}
+#sermon .panel h2,#comms .panel h2,#study .panel h2,#meeting .panel h2,#care .panel h2,#dev .panel h2{
+ color:#fff!important;margin:8px -22px 20px!important;padding:22px 24px!important;
+ font-size:clamp(24px,4vw,34px)!important;box-shadow:0 8px 18px rgba(0,0,0,.12)!important;
+}
+
+/* Los dos módulos nuevos ya tienen section-head: convertirlo en cabecera cromática real */
+#leadership .section-head{background:linear-gradient(135deg,#147684,#0d5964)!important;color:#fff!important;border-radius:22px;padding:22px!important;margin-bottom:16px!important;box-shadow:0 10px 24px rgba(20,118,132,.25)!important}
+#pastorcare .section-head{background:linear-gradient(135deg,#ce4f5c,#9f3545)!important;color:#fff!important;border-radius:22px;padding:22px!important;margin-bottom:16px!important;box-shadow:0 10px 24px rgba(206,79,92,.25)!important}
+#leadership .section-head h2,#leadership .section-head p,#leadership .section-head .eyebrow,
+#pastorcare .section-head h2,#pastorcare .section-head p,#pastorcare .section-head .eyebrow{color:#fff!important}
+
+/* Botones principales: color exacto del módulo */
+#sermon .btn.primary{background:linear-gradient(135deg,#d75f35,#a83c25)!important}
+#comms .btn.primary{background:linear-gradient(135deg,#168bb5,#0d6387)!important}
+#study .btn.primary{background:linear-gradient(135deg,#149458,#087443)!important}
+#meeting .btn.primary{background:linear-gradient(135deg,#e3a51c,#b87509)!important}
+#care .btn.primary{background:linear-gradient(135deg,#b94d79,#87345d)!important}
+#dev .btn.primary{background:linear-gradient(135deg,#7357a8,#513887)!important}
+#leadership .btn.primary{background:linear-gradient(135deg,#147684,#0d5964)!important}
+#pastorcare .btn.primary{background:linear-gradient(135deg,#ce4f5c,#9f3545)!important}
+#sermon .btn.primary,#comms .btn.primary,#study .btn.primary,#meeting .btn.primary,#care .btn.primary,#dev .btn.primary,#leadership .btn.primary,#pastorcare .btn.primary{
+ color:#fff!important;border:0!important;box-shadow:0 8px 18px rgba(23,63,79,.18)!important
+}
+
+/* Campos con bordes del color del módulo */
+#sermon input,#sermon select,#sermon textarea{border-color:#e2a08a!important}
+#comms input,#comms select,#comms textarea{border-color:#82bfd4!important}
+#study input,#study select,#study textarea{border-color:#83c9a2!important}
+#meeting input,#meeting select,#meeting textarea{border-color:#e7bf68!important}
+#care input,#care select,#care textarea{border-color:#d796b5!important}
+#dev input,#dev select,#dev textarea{border-color:#ae9ad0!important}
+#leadership input,#leadership select,#leadership textarea{border-color:#79bac1!important}
+#pastorcare input,#pastorcare select,#pastorcare textarea{border-color:#df929b!important}
+
+/* Avisos y resultados también mantienen el color */
+#sermon .notice,#sermon .result{background:#fff0e9!important;border-left:6px solid #d75f35!important}
+#comms .notice,#comms .result{background:#e9f6fb!important;border-left:6px solid #168bb5!important}
+#study .notice,#study .result{background:#e8f7ee!important;border-left:6px solid #149458!important}
+#meeting .notice,#meeting .result{background:#fff5dd!important;border-left:6px solid #e3a51c!important}
+#care .notice,#care .result{background:#faeaf2!important;border-left:6px solid #b94d79!important}
+#dev .notice,#dev .result{background:#f0ebfa!important;border-left:6px solid #7357a8!important}
+#leadership .result,#leadership .route-box{background:#e8f5f6!important;border-left:6px solid #147684!important}
+#pastorcare .result,#pastorcare .route-box,#pastorcare .safety-note{background:#fdecef!important;border-left:6px solid #ce4f5c!important}
+
+/* Inicio siempre visible y coherente */
+#sermon .back,#comms .back,#study .back,#meeting .back,#care .back,#dev .back,#leadership .back,#pastorcare .back{
+ background:#fff!important;color:#173F4F!important;border:1px solid #cbdad5!important;
+ border-radius:13px!important;padding:10px 14px!important;box-shadow:0 5px 12px rgba(23,63,79,.10)!important
+}
+</style>
 </head><body>
 <section id="login" class="login"><div class="login-brand-row">
   <div class="brand-mark-strong" aria-label="Pastoral Plus">P<span class="plus">+</span></div>
   <div class="login-brand-copy"><div class="sp">SOMOS PROTAGONISTAS</div><div class="pp">Pastoral+</div></div>
-</div></div><h1>Más tiempo para las personas.</h1><p class="muted"><div class="login-subtitle-strong">Herramientas prácticas para preparar, comunicar, liderar y acompañar.</div></p><label>Código de acceso</label><input id="code" placeholder="MX7K4" autocomplete="off"><label>Clave</label><input id="pass" type="password" placeholder="••••••••" autocomplete="off"><div class="actions"><button class="btn primary" onclick="doLogin()">Ingresar</button></div><p id="loginErr" class="muted"></p><p class="muted">V2.6.7 · by Somos Protagonistas</p></div></section>
-<div id="shell" class="app hidden"><div class="top"><div class="brand"><div class="logo">P+</div><div><div class="sp">Somos Protagonistas</div><strong>Pastoral+</strong><div class="muted">Más tiempo para las personas.</div></div></div><span class="badge">V2.6.7</span></div><main><div class="brand-strip">PASTORAL+ · una mini app desarrollada por SOMOS PROTAGONISTAS</div>
+</div></div><h1>Más tiempo para las personas.</h1><p class="muted"><div class="login-subtitle-strong">Herramientas prácticas para preparar, comunicar, liderar y acompañar.</div></p><label>Código de acceso</label><input id="code" placeholder="MX7K4" autocomplete="off"><label>Clave</label><input id="pass" type="password" placeholder="••••••••" autocomplete="off"><div class="actions"><button class="btn primary" onclick="doLogin()">Ingresar</button></div><p id="loginErr" class="muted"></p><p class="muted">V2.6.8 · by Somos Protagonistas</p></div></section>
+<div id="shell" class="app hidden"><div class="top"><div class="brand"><div class="logo">P+</div><div><div class="sp">Somos Protagonistas</div><strong>Pastoral+</strong><div class="muted">Más tiempo para las personas.</div></div></div><span class="badge">V2.6.8</span></div><main><div class="brand-strip">PASTORAL+ · una mini app desarrollada por SOMOS PROTAGONISTAS</div>
 <section id="home" class="screen"><div class="identity26"><div><b>Pastoral+ · Tu copiloto ministerial</b><small>Formación · Liderazgo · Preparación · Acompañamiento</small></div><div>✦</div></div><div class="hero"><div class="sp" style="color:#ffd8c3">SOMOS PROTAGONISTAS PRESENTA</div><div style="font-size:13px;font-weight:900;letter-spacing:.09em;color:#ffdd67;margin-bottom:8px">INSPIRACIÓN · DETERMINACIÓN · RECURSOS DEL REINO</div><h1>¿CUÁL ES TU COMPROMISO PARA HOY?</h1><p>Encuentra aquí recursos para preparar, liderar, acompañar y servir.</p><div style="margin-top:14px;font-size:12px;opacity:.86">Desarrollado por <strong>Somos Protagonistas</strong></div></div><div class="inspire26"><strong>PALABRA PARA HOY · JOSUÉ 1:9</strong><blockquote>“Mira que te mando que te esfuerces y seas valiente; no temas ni desmayes, porque Jehová tu Dios estará contigo dondequiera que vayas.”</blockquote><small>Josué 1:9</small></div><div class="grid">
 <button class="tool" data-open="sermon"><div class="ico">📖</div><h3>DIOS HABLA HOY</h3><p>Bosquejo completo, textos, puntos, aplicación, llamado y oración.</p></button>
 <button class="tool" data-open="comms"><div class="ico">📣</div><h3>COMUNICACIÓN TOTAL</h3><p>Una actividad se convierte en seis piezas listas para copiar.</p></button>
@@ -540,4 +615,4 @@ body{background:linear-gradient(180deg,#dff2e6 0,#fff5d9 36%,#f7f1e8 100%)!impor
 
 <section id="guide" class="screen"><div class="panel"><h2>🛡️ Guía Pastoral+</h2><div class="result"><h4>🟢 Tecnología para preparar</h4><p>Organizar ideas, preparar materiales y estructurar acciones.</p></div><div class="result"><h4>🟡 El pastor revisa y adapta</h4><p>Contenido bíblico, orientación sensible y cualquier material que vaya a compartirse.</p></div><div class="result"><h4>🔴 Lo humano no se delega</h4><p>Discernimiento, confidencialidad, decisiones críticas, cuidado y presencia.</p></div><div class="actions"><button class="btn terra" onclick="logout()">🚪 Salir</button></div></div></section>
 <div class="footer-brand">Pastoral+ · <strong>Desarrollado por Somos Protagonistas</strong><br>Simple por fuera. Inteligente por dentro. Humana siempre.</div></main><nav><div><button data-open="home"><b>🏠</b>Inicio</button><button data-open="learn"><b>🎓</b>Aprender</button><button data-open="guide"><b>🛡️</b>Guía</button><button class="exit-nav" onclick="logout()"><b>🚪</b>Salir</button></div></nav></div>
-<script src="app.js?v=2.6.7"></script></body></html>
+<script src="app.js?v=2.6.8"></script></body></html>
