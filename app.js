@@ -112,4 +112,91 @@ document.addEventListener('input',e=>{
 });
 
 document.addEventListener('DOMContentLoaded',()=>{loadLearnProgress();$('login').classList.remove('hidden');$('shell').classList.add('hidden');$('pass')?.addEventListener('keydown',e=>{if(e.key==='Enter')doLogin()});});
-if('serviceWorker' in navigator)navigator.serviceWorker.register('./sw.js?v=2.6.1');
+if('serviceWorker' in navigator)navigator.serviceWorker.register('./sw.js?v=2.6.2');
+
+
+const leadershipRoutes = {
+  delegar:{
+    title:"Delegar con claridad y confianza",
+    objective:"Transferir responsabilidad sin abandonar el acompañamiento.",
+    steps:["Define el resultado esperado antes de hablar.","Explica por qué esta responsabilidad importa.","Aclara qué puede decidir la persona y qué debe consultar.","Acuerden un primer punto de seguimiento."],
+    questions:["¿Qué necesitas de mí para asumir esta responsabilidad?","¿Qué parte te genera más duda?","¿Cómo sabremos que estamos avanzando bien?"],
+    action:"Termina la conversación con una responsabilidad, una fecha y un próximo contacto."
+  },
+  nuevo:{
+    title:"Desarrollar un nuevo líder",
+    objective:"Observar potencial, dar una oportunidad concreta y acompañar el crecimiento.",
+    steps:["Identifica una fortaleza que ya hayas observado.","Entrega una responsabilidad pequeña y real.","Explica el propósito, no solamente la tarea.","Revisa después qué aprendió y qué necesita fortalecer."],
+    questions:["¿En qué área sientes que puedes servir mejor?","¿Qué te gustaría aprender?","¿Qué apoyo necesitas para dar el siguiente paso?"],
+    action:"Define una experiencia práctica de liderazgo para esta semana."
+  },
+  equipo:{
+    title:"Fortalecer el equipo",
+    objective:"Mejorar confianza, coordinación y sentido de propósito.",
+    steps:["Recuerda el propósito común.","Reconoce algo que el equipo está haciendo bien.","Identifica una dificultad concreta, no una lista de problemas.","Acuerden una mejora pequeña y observable."],
+    questions:["¿Qué debemos conservar?","¿Qué nos está quitando energía?","¿Qué podemos hacer diferente desde esta semana?"],
+    action:"Cierra con un acuerdo simple que todos puedan recordar."
+  },
+  dificil:{
+    title:"Preparar una conversación difícil",
+    objective:"Hablar con claridad sin perder respeto ni relación.",
+    steps:["Separa hechos de interpretaciones.","Describe el impacto concreto de la situación.","Escucha antes de plantear soluciones.","Busca un acuerdo específico y verificable."],
+    questions:["¿Cómo estás viendo tú esta situación?","¿Qué crees que necesitamos corregir?","¿Qué compromiso concreto podemos asumir?"],
+    action:"Evita discutir intenciones; trabaja sobre conductas, impacto y próximos pasos."
+  },
+  reconocer:{
+    title:"Reconocer y motivar",
+    objective:"Hacer visible una contribución valiosa y fortalecer el sentido de servicio.",
+    steps:["Menciona una acción concreta que observaste.","Explica a quién benefició.","Relaciona esa contribución con la misión.","Pregunta cómo puedes apoyar su crecimiento."],
+    questions:["¿Qué has disfrutado más de servir?","¿Dónde quisieras crecer?","¿Qué podría facilitar mejor tu servicio?"],
+    action:"Haz el reconocimiento específico, breve y genuino."
+  },
+  vision:{
+    title:"Alinear al equipo con la visión",
+    objective:"Convertir una visión amplia en prioridades comprensibles.",
+    steps:["Expresa la visión en una frase sencilla.","Explica por qué importa ahora.","Conecta cada responsabilidad con esa visión.","Define la prioridad inmediata."],
+    questions:["¿Qué significa esta visión para nuestro equipo?","¿Qué deberíamos priorizar?","¿Qué deberíamos dejar de hacer para enfocarnos?"],
+    action:"Cierra con una prioridad compartida para los próximos días."
+  }
+};
+
+function leadershipGenerate(){
+  const key=document.getElementById('leadNeed').value;
+  const ctx=document.getElementById('leadContext').value.trim();
+  const r=leadershipRoutes[key];
+  const out=document.getElementById('leadResult');
+  out.innerHTML=`<div class="route-box"><h3>${r.title}</h3><p><b>Objetivo:</b> ${r.objective}</p>${ctx?`<p><b>Tu contexto:</b> ${escapeHtml(ctx)}</p>`:""}<p><b>Ruta sugerida</b></p><ol>${r.steps.map(x=>`<li>${x}</li>`).join("")}</ol><p><b>Preguntas que pueden ayudarte</b></p><ul>${r.questions.map(x=>`<li>${x}</li>`).join("")}</ul><p><b>Acción de cierre:</b> ${r.action}</p></div>`;
+  out.classList.remove('hidden');
+}
+function clearLeadership(){
+  document.getElementById('leadNeed').selectedIndex=0;
+  document.getElementById('leadContext').value='';
+  const o=document.getElementById('leadResult'); o.innerHTML=''; o.classList.add('hidden');
+}
+
+const pastorCareRoutes={
+  carga:{title:"Reducir la sobrecarga",reflection:"No todo lo importante necesita ser atendido por ti personalmente.",questions:["¿Qué solamente tú puedes hacer?","¿Qué puedes delegar esta semana?","¿Qué actividad puede esperar sin causar un daño real?"],actions:["Escoge una tarea para delegar.","Elimina o posterga una actividad no esencial.","Reserva un espacio breve sin tareas ministeriales."]},
+  limites:{title:"Revisar tus límites",reflection:"Un límite saludable protege tu capacidad de servir de manera sostenible.",questions:["¿A qué estás diciendo sí por presión?","¿Qué límite necesitas comunicar con respeto?","¿Qué responsabilidad pertenece realmente a otra persona?"],actions:["Define un no necesario.","Comunícalo con claridad y sin justificarte excesivamente.","Ofrece una alternativa solo si realmente puedes sostenerla."]},
+  tiempo:{title:"Ordenar tiempo y prioridades",reflection:"Una agenda llena no siempre significa una semana bien enfocada.",questions:["¿Cuáles son las tres prioridades reales de esta semana?","¿Qué está ocupando tiempo sin acercarte a ellas?","¿Dónde necesitas un bloque protegido?"],actions:["Selecciona tres prioridades.","Bloquea tiempo para una de ellas.","Agrupa tareas pequeñas en un solo momento."]},
+  descanso:{title:"Recuperar espacio de descanso",reflection:"El descanso forma parte de una vida ministerial sostenible.",questions:["¿Cuándo fue tu último espacio real de descanso?","¿Qué interrumpe constantemente ese tiempo?","¿Qué pequeño cambio es posible esta semana?"],actions:["Protege un período concreto de descanso.","Reduce una interrupción evitable.","Haz algo restaurador que no sea otra obligación."]},
+  familia:{title:"Cuidar ministerio y familia",reflection:"La urgencia ministerial no debería convertir a la familia en el espacio que siempre cede.",questions:["¿Qué necesita tu familia de ti esta semana?","¿Qué compromiso ministerial puede reorganizarse?","¿Qué momento quieres proteger?"],actions:["Reserva un espacio familiar concreto.","Comunica ese límite a quien corresponda.","Evita llenar ese espacio con tareas pendientes."]},
+  critica:{title:"Procesar presión, crítica o frustración",reflection:"No toda crítica debe ignorarse, pero tampoco toda crítica debe dirigir tus decisiones.",questions:["¿Qué parte contiene un dato útil?","¿Qué parte es interpretación o emoción?","¿Con quién puedes procesarlo de manera madura?"],actions:["Separa hechos de opiniones.","Evita responder en el momento de mayor carga emocional.","Decide si corresponde escuchar, conversar, corregir o simplemente soltar."]}
+};
+
+function pastorCareGenerate(){
+  const key=document.getElementById('careNeed').value;
+  const level=document.getElementById('careLevel').value;
+  const r=pastorCareRoutes[key];
+  const out=document.getElementById('pastorCareResult');
+  let alert=level==='muycargada'?'<div class="safety-note"><b>Atención:</b> si esta sensación es persistente, intensa o afecta seriamente tu funcionamiento, busca apoyo de una persona de confianza y de un profesional calificado.</div>':'';
+  out.innerHTML=`<div class="route-box"><h3>${r.title}</h3><p>${r.reflection}</p><p><b>Preguntas para detenerte y revisar</b></p><ul>${r.questions.map(x=>`<li>${x}</li>`).join("")}</ul><p><b>Tres acciones posibles</b></p><ol>${r.actions.map(x=>`<li>${x}</li>`).join("")}</ol><p><b>Elige solamente una para comenzar hoy.</b></p></div>${alert}`;
+  out.classList.remove('hidden');
+}
+function clearPastorCare(){
+  document.getElementById('careNeed').selectedIndex=0;
+  document.getElementById('careLevel').selectedIndex=0;
+  const o=document.getElementById('pastorCareResult'); o.innerHTML=''; o.classList.add('hidden');
+}
+
+
+function escapeHtml(s){return String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[c]));}

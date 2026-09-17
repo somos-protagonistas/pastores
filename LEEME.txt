@@ -1,7 +1,17 @@
-Pastoral+ V2.6.1 — Ajuste visual intenso según retroalimentación de Robyn.
-- Se elimina “¿Qué necesitas preparar hoy?” de la portada.
-- El mensaje principal pasa a “¿CUÁL ES TU COMPROMISO PARA HOY?”
-- Inspiración · Determinación · Recursos del Reino.
-- Colores más fuertes y diferenciados por módulo.
-- Josué 1:9 como bloque destacado.
-- Se conserva la funcionalidad de la versión piloto, sin IA, n8n ni backend.
+PASTORAL+ V2.6.2 — COPILOTO MINISTERIAL
+
+Novedades:
+- Se mantienen los 6 módulos principales existentes.
+- Nuevo módulo: LIDERAZGO Y EQUIPOS.
+- Nuevo módulo: CUIDADO DEL PASTOR.
+- Total: 8 módulos principales.
+- Los nuevos módulos son funcionales y trabajan localmente.
+- Sin IA, sin n8n, sin backend y sin almacenamiento de datos sensibles.
+- Aprender y Guía continúan como herramientas secundarias.
+- Se conserva el botón Salir y la pantalla de acceso.
+- Se conserva la dirección visual verde + colores diferenciados por módulo.
+
+Accesos de prueba:
+PRUEBA1 / SP-2026
+MX7K4 / SP-4827
+R8NQ2 / SP-7314
