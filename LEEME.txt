@@ -1,8 +1,7 @@
-Pastoral+ V2.6.6 — Interfaz viva integral
-
-- Entrada con mayor energía visual manteniendo sobriedad.
-- El color de cada módulo ya no se limita a la tarjeta de inicio.
-- Cada módulo conserva su identidad cromática en fondo, paneles, formularios,
-  botones, campos activos, resultados, avisos y elementos de interacción.
-- Se mantiene la navegación y lógica funcional de V2.6.5.
-- Sin IA, n8n ni backend.
+Pastoral+ V2.6.7
+Correcciones:
+1. Después de un acceso válido se abre directamente Inicio con los módulos visibles.
+2. Los módulos ahora llevan su color principal al encabezado, fondo, panel, campos,
+   botones, avisos y resultados; no solamente a una etiqueta.
+3. Se conserva la identidad cromática individual de los ocho módulos.
+4. No se cambia la lógica funcional de generación.
