@@ -1,17 +1,2 @@
-PASTORAL+ V2.5.2 — VERSIÓN PILOTO
-
-Ajustes finales:
-- Aprender ya es funcional y nativo dentro de Pastoral+.
-- 8 capítulos del recurso “IA para Pastores: Fundamentos sin Miedo”.
-- Progreso de 0 a 8 capítulos guardado localmente.
-- Notas por capítulo guardadas localmente.
-- Plan de 90 días y glosario básico.
-- Botón Salir permanente en la navegación inferior.
-- Salir cierra la sesión y regresa al login.
-- Se mantiene Sermón 360 con biblioteca local.
-- Sin IA, sin n8n y sin backend.
-
-Accesos:
-PRUEBA1 / SP-2026
-MX7K4 / SP-4827
-R8NQ2 / SP-7314
+Pastoral+ V2.6.0 — propuesta visual para retroalimentación de Robyn.
+Base verde/blanco inspirada en Universidad Pastor, acentos Somos Protagonistas, mayor iconografía y nuevos nombres de módulos. Mantiene la lógica funcional de V2.5.2. Sin IA, n8n ni backend.
