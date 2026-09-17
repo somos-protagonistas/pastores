@@ -1,17 +1,5 @@
-PASTORAL+ V2.6.2 — COPILOTO MINISTERIAL
-
-Novedades:
-- Se mantienen los 6 módulos principales existentes.
-- Nuevo módulo: LIDERAZGO Y EQUIPOS.
-- Nuevo módulo: CUIDADO DEL PASTOR.
-- Total: 8 módulos principales.
-- Los nuevos módulos son funcionales y trabajan localmente.
-- Sin IA, sin n8n, sin backend y sin almacenamiento de datos sensibles.
-- Aprender y Guía continúan como herramientas secundarias.
-- Se conserva el botón Salir y la pantalla de acceso.
-- Se conserva la dirección visual verde + colores diferenciados por módulo.
-
-Accesos de prueba:
-PRUEBA1 / SP-2026
-MX7K4 / SP-4827
-R8NQ2 / SP-7314
+Pastoral+ V2.6.3
+Correcciones:
+- Liderazgo y Equipos y Cuidado del Pastor ahora conservan la misma geometría redondeada, tamaño, espaciado y jerarquía visual que las otras tarjetas.
+- Se agregó botón 🏠 Inicio dentro de ambos módulos para regresar directamente a la portada.
+- Se mantiene toda la funcionalidad de V2.6.2.

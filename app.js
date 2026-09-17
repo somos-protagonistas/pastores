@@ -112,7 +112,7 @@ document.addEventListener('input',e=>{
 });
 
 document.addEventListener('DOMContentLoaded',()=>{loadLearnProgress();$('login').classList.remove('hidden');$('shell').classList.add('hidden');$('pass')?.addEventListener('keydown',e=>{if(e.key==='Enter')doLogin()});});
-if('serviceWorker' in navigator)navigator.serviceWorker.register('./sw.js?v=2.6.2');
+if('serviceWorker' in navigator)navigator.serviceWorker.register('./sw.js?v=2.6.3');
 
 
 const leadershipRoutes = {
