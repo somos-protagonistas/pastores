@@ -1,11 +1,11 @@
 {
-  "name": "Pastoral+ V2.6.0",
+  "name": "Pastoral+ V2.6.1",
   "short_name": "Pastoral+",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
-  "background_color": "#F8F5EF",
-  "theme_color": "#1f6b4f",
+  "background_color": "#dff2e6",
+  "theme_color": "#087443",
   "icons": [
     {
       "src": "icon-192.png",

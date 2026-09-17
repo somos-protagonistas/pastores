@@ -1,2 +1,7 @@
-Pastoral+ V2.6.0 — propuesta visual para retroalimentación de Robyn.
-Base verde/blanco inspirada en Universidad Pastor, acentos Somos Protagonistas, mayor iconografía y nuevos nombres de módulos. Mantiene la lógica funcional de V2.5.2. Sin IA, n8n ni backend.
+Pastoral+ V2.6.1 — Ajuste visual intenso según retroalimentación de Robyn.
+- Se elimina “¿Qué necesitas preparar hoy?” de la portada.
+- El mensaje principal pasa a “¿CUÁL ES TU COMPROMISO PARA HOY?”
+- Inspiración · Determinación · Recursos del Reino.
+- Colores más fuertes y diferenciados por módulo.
+- Josué 1:9 como bloque destacado.
+- Se conserva la funcionalidad de la versión piloto, sin IA, n8n ni backend.
