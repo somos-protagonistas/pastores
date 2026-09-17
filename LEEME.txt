@@ -1,7 +1,8 @@
-Pastoral+ V2.6.4
-Corrección puntual:
-- Liderazgo y Equipos usa ahora exactamente el mismo control ← Inicio de los módulos existentes.
-- Cuidado del Pastor usa ahora exactamente el mismo control ← Inicio de los módulos existentes.
-- Se eliminó el botón Inicio personalizado de V2.6.3.
-- La navegación utiliza data-open="home", el mismo mecanismo ya funcional en el resto de Pastoral+.
-- Se conserva el diseño y funcionalidad de V2.6.3.
+Pastoral+ V2.6.5
+Cambio visual puntual:
+- Pantalla de acceso con mayor presencia y contraste, sin usar colores chillones.
+- Fondo verde/crema/terracota muy suave con tarjeta blanca de alto contraste.
+- Marca P+ reforzada con degradado verde petróleo y acento dorado.
+- Franja superior multicolor inspirada en la identidad visual del proyecto.
+- Titular y jerarquía visual reforzados.
+- No se modifica la lógica de acceso ni los módulos de V2.6.4.
