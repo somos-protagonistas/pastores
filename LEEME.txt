@@ -1,9 +1,14 @@
-Pastoral+ V2.7.1
-Corrección puntual: ÍNTIMO CON DIOS.
+Pastoral+ V2.7.2
 
-- Se mantiene toda la V2.7.0.
-- Se agregó un enlace explícito entre el botón de generación del módulo ÍNTIMO CON DIOS y la función dev().
-- Se mantiene el vocabulario pastoral ampliado.
-- Se actualizó la caché PWA a V2.7.1.
+CAUSA RAÍZ CORREGIDA EN ÍNTIMO CON DIOS:
+La función dev() declaraba h como constante y después intentaba acumular el contenido con h += ...
+Eso detenía la generación con un error de JavaScript.
 
-Reemplazar TODOS los archivos en GitHub y confirmar que se muestre V2.7.1.
+Ahora:
+- h está declarada con let.
+- se eliminó el listener redundante de V2.7.1.
+- el botón mantiene onclick="dev()".
+- caché PWA V2.7.2.
+- prueba funcional ejecutada: devocional de 3 días sobre Adoración generado correctamente.
+
+Reemplazar TODOS los archivos en GitHub y comprobar que la app indique V2.7.2.

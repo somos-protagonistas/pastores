@@ -81,7 +81,7 @@ function care(){let s=$('aSituation').value,m=$('aMoment').value;$('aOut').inner
 function dev(){
  const raw=val('dTopic')||'Esperanza',a=esc($('dAudience').value),days=+$('dDays').value,m=matchTopic(raw);
  if(!m){$('dOut').innerHTML=card('⚠️ Tema todavía no disponible',`No encontré una coincidencia clara para “${esc(raw)}”. Elige una sugerencia del vocabulario pastoral.`);return}
- const item=m.item,meta=PASTORAL_META[m.key]||{},variants=item.variants,h='';
+ const item=m.item,meta=PASTORAL_META[m.key]||{},variants=item.variants; let h='';
  for(let i=0;i<days;i++){
    const v=variants[i%variants.length],ref=i===0?v.base:v.supports[(i-1)%v.supports.length];
    h+=card(`🙏 Día ${i+1} · ${item.title}`,`📖 ${ref}
@@ -166,7 +166,7 @@ document.addEventListener('input',e=>{
 });
 
 document.addEventListener('DOMContentLoaded',()=>{loadLearnProgress();$('login').classList.remove('hidden');$('shell').classList.add('hidden');$('pass')?.addEventListener('keydown',e=>{if(e.key==='Enter')doLogin()});});
-if('serviceWorker' in navigator)navigator.serviceWorker.register('./sw.js?v=2.7.1');
+if('serviceWorker' in navigator)navigator.serviceWorker.register('./sw.js?v=2.7.2');
 
 
 const leadershipRoutes = {
@@ -254,13 +254,3 @@ function clearPastorCare(){
 
 
 function escapeHtml(s){return String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[c]));}
-
-
-// V2.7.1 — enlace explícito del generador de ÍNTIMO CON DIOS.
-const devGenerateButton=document.getElementById('devGenerate');
-if(devGenerateButton){
-  devGenerateButton.addEventListener('click',function(e){
-    e.preventDefault();
-    dev();
-  });
-}
