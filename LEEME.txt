@@ -1,15 +1,9 @@
-Pastoral+ V2.7.0 — Lenguaje pastoral, hermenéutica y homilética
+Pastoral+ V2.7.1
+Corrección puntual: ÍNTIMO CON DIOS.
 
-NOVEDADES
-- Biblioteca ampliada de 30 a 65 temas cristiano-evangélicos.
-- Se incorporan Misericordia, Adoración, Alabanza, Gracia, Salvación, Redención,
-  Santidad, Arrepentimiento, Comunión, Discipulado, Espíritu Santo, Avivamiento,
-  Dones espirituales, Fruto del Espíritu y otros.
-- Adoración y Oración se reconocen como conceptos distintos.
-- Sugerencias de temas al escribir en Dios Habla Hoy, Estudio Bíblico 2.0 e Íntimo con Dios.
-- DIOS HABLA HOY incorpora contexto hermenéutico, sentido central y estructura homilética.
-- ESTUDIO BÍBLICO 2.0 incorpora Contexto, Interpretación, Principio bíblico y Aplicación.
-- ÍNTIMO CON DIOS usa el contenido específico del tema reconocido.
-- Sin IA, sin n8n y sin backend.
+- Se mantiene toda la V2.7.0.
+- Se agregó un enlace explícito entre el botón de generación del módulo ÍNTIMO CON DIOS y la función dev().
+- Se mantiene el vocabulario pastoral ampliado.
+- Se actualizó la caché PWA a V2.7.1.
 
-Base técnica: V2.6.8.
+Reemplazar TODOS los archivos en GitHub y confirmar que se muestre V2.7.1.

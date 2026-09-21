@@ -166,7 +166,7 @@ document.addEventListener('input',e=>{
 });
 
 document.addEventListener('DOMContentLoaded',()=>{loadLearnProgress();$('login').classList.remove('hidden');$('shell').classList.add('hidden');$('pass')?.addEventListener('keydown',e=>{if(e.key==='Enter')doLogin()});});
-if('serviceWorker' in navigator)navigator.serviceWorker.register('./sw.js?v=2.7.0');
+if('serviceWorker' in navigator)navigator.serviceWorker.register('./sw.js?v=2.7.1');
 
 
 const leadershipRoutes = {
@@ -254,3 +254,13 @@ function clearPastorCare(){
 
 
 function escapeHtml(s){return String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[c]));}
+
+
+// V2.7.1 — enlace explícito del generador de ÍNTIMO CON DIOS.
+const devGenerateButton=document.getElementById('devGenerate');
+if(devGenerateButton){
+  devGenerateButton.addEventListener('click',function(e){
+    e.preventDefault();
+    dev();
+  });
+}
